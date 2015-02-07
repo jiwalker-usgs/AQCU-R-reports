@@ -1,0 +1,25 @@
+\documentclass{article}
+
+\usepackage{booktabs}
+\usepackage[letterpaper,top=0.25in, bottom=0.25in, left=0.25in, right=0.25in]{geometry}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{multicol}
+
+<<setup, echo=FALSE>>=
+library(xtable)
+source('VDiagram.R')
+opts_chunk$set(highlight=FALSE, tidy=FALSE, keep.space=TRUE,
+               keep.blank.space=FALSE, keep.comment=TRUE, tidy=FALSE,
+               quote=FALSE, comment=NA, echo=FALSE)
+@
+
+\begin{document}
+
+<<v_diagram, out.width='1\\linewidth',fig.height=8>>=
+set_up_plot()
+add_series(Curves[[1]])
+add_series(Curves[[2]])
+add_ratings(Measured)
+@
+\end{document}

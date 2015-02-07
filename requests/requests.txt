@@ -1,0 +1,22 @@
+c42c4e633a47d7dd11671cbf6ee5b885
+
+Gage height-Discharge.STGQ@01054200
+
+01054200
+
+http://cida-eros-carpdev.er.usgs.gov/AQUARIUS/Publish/V2/GetAuthToken?userName=apiuser&encryptedPassword=Yfp77tLzNW4j7SWTNXZfZ0QEKrBpTHmtvL4vqu7hzkqajWq89mMSR3CEOsjq4RO4hhPHV7DspAPO8AN6cFXiH1xdWVPL%2BXx0yEiHDkzyWDZrlIkyL7VJ50fSKEkyB%2BS6XEEih7gIo%2F7hUOP0XNRLpdDETSGpaSeB2SHHVXZF%2BzA%3D
+
+http://cida-eros-carpdev.er.usgs.gov/AQUARIUS/Publish/V2/GetLocationDescriptionList.json?locationIdentifier=01054200
+	Identifier
+	Name
+
+http://cida-eros-carpdev.er.usgs.gov/AQUARIUS/Publish/V2/GetRatingModelDescriptionList.json?locationIdentifier=01054200
+
+http://cida-eros-carpdev.er.usgs.gov/AQUARIUS/Publish/V2/GetTimeSeriesIdentifierList.json?locationidentifier=01054200
+
+http://cida-eros-carpdev.er.usgs.gov/AQUARIUS/Publish/V2/GetRatingCurveList.json?ratingmodelidentifier=Gage height-Discharge.STGQ@01054200
+
+http://cida-eros-carpdev.er.usgs.gov/AQUARIUS/Publish/V2/GetRatingModelEffectiveShifts.json?timeseriesidentifier=Gage height.TS0156@01054200&ratingmodelidentifier=Gage height-Discharge.STGQ@01054200
+
+
+http://cida-eros-carpdev.er.usgs.gov/AQUARIUS/Publish/V2/GetEffectiveRatingCurve.json?timeseriesidentifier=Gage height.TS0156@01054200&ratingmodelidentifier=Gage height-Discharge.STGQ@01054200

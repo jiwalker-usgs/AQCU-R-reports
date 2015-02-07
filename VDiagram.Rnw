@@ -1,0 +1,59 @@
+\documentclass{article}
+
+\usepackage{booktabs}
+\usepackage[letterpaper,top=0.25in, bottom=0.25in, left=0.25in, right=0.25in]{geometry}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{multicol}
+
+<<setup, echo=FALSE>>=
+library(xtable)
+source('VDiagram.R')
+opts_chunk$set(highlight=FALSE, tidy=FALSE, keep.space=TRUE,
+               keep.blank.space=FALSE, keep.comment=TRUE, tidy=FALSE,
+               quote=FALSE, comment=NA, echo=FALSE)
+@
+
+%\title{
+%<<gageId, results="asis">>=
+%cat(paste(Metadata$gageId, ' - ', Metadata$gageName))
+%@
+%}
+
+%\cfoot{Plot \thepage\ of \pageref{LastPage}\ for period}
+
+\begin{document}
+\SweaveOpts{concordance=TRUE}
+
+%\maketitle
+
+This is the first pass at the V-Diagram report.  All that follows is meant to emluate that plot
+
+%\begin{multicols}{2}
+%\begin{minipage}{.45\textwidth}
+%Shifts to effective rating(s)
+
+%<<timeRange, results="asis">>=
+%cat(paste(Metadata$period[1], ' to ', Metadata$period[2]))
+%@
+
+%Horizontal red bars at max and min gage height for the period shown.
+
+%Unlabeled blue points are historical measurements from the last 2 years.
+%\end{minipage}
+
+<<rating_table, results="asis", warning=FALSE>>=
+print(xtable(Ratings),
+  include.rownames=FALSE,
+  size="tiny",
+  hline.after=NULL)
+@
+
+%\end{multicols}
+<<v_diagram, out.width='1\\linewidth',fig.height=8>>=
+set_up_plot()
+add_series(Curves[[1]])
+add_series(Curves[[2]])
+add_ratings(Measured)
+@
+\end{document}
